@@ -1,0 +1,25 @@
+<div class="container">
+  <h1>All you need to do</h1>
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Done</th>
+    </tr>
+    </thead>
+    <tbody>
+    <ng-container *ngFor="let toDo of allTodos">
+      <tr>
+        <td>{{ toDo.id }}</td>
+        <td>{{ toDo.title }}</td>
+        <td>{{ toDo.description }}</td>
+        <td>{{ toDo.done }}</td>
+      </tr>
+    </ng-container>
+    </tbody>
+  </table>
+
+  <a href="" class="link-primary">Back</a>
+</div>

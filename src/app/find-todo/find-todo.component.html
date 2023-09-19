@@ -1,0 +1,30 @@
+<form (ngSubmit)="submitForm()" #todoForm="ngForm" class="form">
+  <div class="form-group">
+    <label for="id">ID</label>
+    <input type="text" id="id" name="id" [(ngModel)]="id" class="form-control" required>
+  </div>
+  <button type="submit" [disabled]="!todoForm.valid" class="btn btn-primary">Show ToDo</button>
+</form>
+
+<div *ngIf="toDo" class="alert alert-success">
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Done</th>
+    </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{ toDo.id }}</td>
+        <td>{{ toDo.title }}</td>
+        <td>{{ toDo.description }}</td>
+        <td>{{ toDo.done }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<a href="" class="link-primary">Back</a>
